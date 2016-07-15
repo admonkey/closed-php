@@ -6,9 +6,11 @@ for testfile in $(ls tests); do
   fi
 
   ./closed-php.bash tests/$testfile "$1"
-  closed=$?
-  if [ $closed -eq 1 -a "true"  == ${testfile##*.} ] || 
-     [ $closed -eq 0 -a "false" == ${testfile##*.} ]; then
+  actual=$?
+  tmp=${testfile%%.php}
+  expected=${tmp##*.}
+  if [ $actual -eq 1 -a "true"  == $expected ] || 
+     [ $actual -eq 0 -a "false" == $expected ]; then
     echo "[X] $testfile"
   else
     echo "[ ] $testfile"
