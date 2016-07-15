@@ -1,3 +1,7 @@
+`bash` script to detect whether a file ends with an open php block
+
+for more info, see [this stackoverflow question][1]
+
 # Usage
 
     ./closed-php.bash <filename>
@@ -24,3 +28,5 @@ usage:
 verbose usage:
 
     ./test.bash -v
+
+[1]: http://stackoverflow.com/q/38385404/4233593
