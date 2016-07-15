@@ -25,6 +25,10 @@ usage:
 
     ./test.bash
 
+or shortcut:
+
+    ./t
+
 verbose usage:
 
     ./test.bash -v
@@ -32,5 +36,9 @@ verbose usage:
 since there's a lot of output, you probably want to pipe this to `less`
 
     ./test.bash -v | less
+
+or shortcut:
+
+    ./v
 
 [1]: http://stackoverflow.com/q/38385404/4233593
