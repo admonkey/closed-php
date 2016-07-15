@@ -5,6 +5,9 @@ for testfile in $(ls tests); do
     echo; echo
   fi
 
+  # lint php test for syntax errors
+  php -l tests/$testfile > /dev/null
+
   ./closed-php.bash tests/$testfile "$1"
   actual=$?
   tmp=${testfile%%.php}
