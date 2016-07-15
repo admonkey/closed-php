@@ -12,8 +12,8 @@ for testfile in $(ls tests); do
   actual=$?
   tmp=${testfile%%.php}
   expected=${tmp##*.}
-  if [ $actual -eq 1 -a "true"  == $expected ] || 
-     [ $actual -eq 0 -a "false" == $expected ]; then
+  if [ $actual -eq 1 -a "open"   == $expected ] || 
+     [ $actual -eq 0 -a "closed" == $expected ]; then
     echo "[X] $testfile"
   else
     echo "[ ] $testfile"

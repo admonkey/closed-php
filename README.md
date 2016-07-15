@@ -8,8 +8,8 @@ for more info, see [this stackoverflow question][1]
 
 exit return code:
 
-* 0 if open
-* 1 if closed
+* 0 if closed
+* 1 if open
 
 verbose usage:
 
@@ -19,7 +19,7 @@ verbose usage:
 
 PHP files in `tests` folder are named by convention:
 
-    <test number>.<boolean = closed>
+    <test number>.<open/closed>.php
 
 usage:
 
