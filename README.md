@@ -1,19 +1,15 @@
-`bash` script to detect whether a file ends with an open php block
+PHP CLI script to detect whether a file ends with an open PHP block
 
 for more info, see [this stackoverflow question][1]
 
 # Usage
 
-    ./closed-php.bash <filename>
+    php closed-php.php <filename>
 
 exit return code:
 
 * 0 if closed
 * 1 if open
-
-verbose usage:
-
-    ./closed-php.bash <filename> -v
 
 # Testing
 

@@ -5,13 +5,13 @@ for testfile in $(ls tests); do
     echo; echo
     echo '==============TEST========================='
     cat tests/$testfile
-    echo '==============BEGIN========================'
+    echo '==========================================='
   fi
 
   # lint php test for syntax errors
   php -l tests/$testfile > /dev/null
 
-  ./closed-php.bash tests/$testfile "$1"
+  php closed-php.php tests/$testfile
   actual=$?
   tmp=${testfile%%.php}
   expected=${tmp##*.}
