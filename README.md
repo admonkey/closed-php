@@ -29,4 +29,8 @@ verbose usage:
 
     ./test.bash -v
 
+since there's a lot of output, you probably want to pipe this to `less`
+
+    ./test.bash -v | less
+
 [1]: http://stackoverflow.com/q/38385404/4233593

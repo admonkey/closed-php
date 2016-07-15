@@ -3,6 +3,9 @@ for testfile in $(ls tests); do
 
   if [ "$1" == "-v" ]; then
     echo; echo
+    echo '==============TEST========================='
+    cat tests/$testfile
+    echo '==============BEGIN========================'
   fi
 
   # lint php test for syntax errors

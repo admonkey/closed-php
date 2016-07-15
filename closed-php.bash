@@ -16,7 +16,7 @@ for line in $(cat $FILENAME); do
   if [ "$line" == "?>" ]; then
     closed=true
     if $VERBOSE; then
-      echo "CLOSED TAG"
+      echo '    ==========CLOSED TAG==============='
     fi
   else
     closed=false
@@ -25,10 +25,11 @@ done
 
 if $VERBOSE; then
   if $closed; then
-    echo "RESULT CLOSED"
+    echo '==============END RESULT CLOSED============'
   else
-    echo "RESULT OPEN"
+    echo '==============END RESULT OPEN=============='
   fi
+  echo
 fi
 
 if $closed; then
